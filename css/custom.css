@@ -1,0 +1,146 @@
+/* Custom overrides */
+/* Reduce header logo height on desktop; mobile keeps existing rule */
+#header #logo img{max-height:35px;height:auto;display:block}
+
+/* constrain logo size and override other rules */
+#logo img,
+header #logo img,
+.container.main-menu #logo img {
+  max-width:120px !important;
+  width:auto !important;
+  height:auto !important;
+  display:block;
+  margin:0;
+}
+
+/* Subtle hover zoom for service images */
+.single-service img{
+	transition:transform 0.3s ease, filter 0.3s ease;
+	-webkit-transition:transform 0.3s ease, filter 0.3s ease;
+	will-change:transform;
+	transform-origin:center center;
+	display:block;
+}
+.single-service:hover img{
+	transform:scale(1.05);
+	-webkit-transform:scale(1.05);
+	filter:brightness(0.98);
+}
+
+/* Restore gallery images to their natural size (prevent forcing 100% width) */
+.gallery-area .single-gallery .content-image{
+	width: auto !important;
+	max-width: 700px !important;
+	height: auto !important;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Back to Blog link styling */
+.back-to-blog {
+	margin-bottom: 20px;
+}
+
+.back-link {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 500;
+	transition: opacity 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.back-link:hover {
+	opacity: 0.8;
+	text-decoration: underline;
+}
+
+.back-link .lnr {
+	font-size: 16px;
+}
+
+/* Consistent tag styling across the document */
+.tags {
+	margin: 20px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tags li {
+	display: inline-block;
+	border: 2px solid #c6b069;
+	background-color: #fff;
+	padding: 6px 14px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+}
+
+.tags li:hover {
+	background-color: #c6b069;
+	border-color: #c6b069;
+}
+
+.tags li a {
+	color: #222;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	transition: color 0.3s ease;
+}
+
+.tags li:hover a {
+	color: #fff;
+}
+
+/* Tag cloud widget styling */
+.tag-cloud-widget ul li {
+	border: 2px solid #c6b069;
+	background-color: #fff;
+	padding: 6px 14px;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+}
+
+.tag-cloud-widget ul li:hover {
+	background-color: #c6b069;
+	border-color: #c6b069;
+}
+
+.tag-cloud-widget ul li a {
+	color: #222;
+	font-weight: 500;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.tag-cloud-widget ul li:hover a {
+	color: #fff;
+}
+
+/* View All Articles button zoom effect */
+.primary-btn {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary-btn:hover {
+	transform: scale(1.08);
+	box-shadow: 0 6px 20px rgba(198, 176, 105, 0.3);
+}
+
+
+.footer-social a {
+  position: relative;
+  z-index: 20;
+}
+
+.overlay,
+.overlay-bg {
+  pointer-events: none;
+}
